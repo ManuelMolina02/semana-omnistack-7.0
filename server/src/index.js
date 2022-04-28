@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const path = require('path')
@@ -7,8 +8,9 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
+
 //conexão com banco de dados
-mongoose.connect('mongodb+srv://new-user:senhasupersecreta@cluster0.lvrlx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.lvrlx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
 
 })
