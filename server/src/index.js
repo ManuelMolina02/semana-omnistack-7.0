@@ -1,9 +1,11 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
+const path = require('path')
+const cors = require('cors')
 
 const app = express()
-//ler arquivos json
-app.use(express.json())
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
 //conexão com banco de dados
 mongoose.connect('mongodb+srv://new-user:senhasupersecreta@cluster0.lvrlx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
@@ -11,11 +13,17 @@ mongoose.connect('mongodb+srv://new-user:senhasupersecreta@cluster0.lvrlx.mongod
 
 })
 
-//rotas da aplicação
+//configs express
+app.use((req, res, next) => {
+  req.io = io
+  next()
+})
+app.use(cors())
+app.use(express.json())
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resized')))
 app.use(require('./routes'));
 
-
 //porta de escuta
-app.listen(3333, () => {
+server.listen(3333, () => {
   console.log('Server running on port -> http://localhost:3333')
 })
