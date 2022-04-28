@@ -1,0 +1,3 @@
+- é possível criar um post
+- é possível realizar um upload de imagem
+- é possível dar like nos posts
