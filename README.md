@@ -20,7 +20,7 @@ Esse projeto demonstra uma aplicação que funciona em 'tempo real', ou seja, é
 </h1>
 
 <h1 align="center">
-    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img2.png" width="520px" height="320px" />
+    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img2.png" width="520px" height="180px" />
 </h1>
 
 <br/>
