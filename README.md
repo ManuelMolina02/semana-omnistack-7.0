@@ -16,11 +16,11 @@ Esse projeto demonstra uma aplicação que funciona em 'tempo real', ou seja, é
 ## 🔖 Layout
 
 <h1 align="center">
-    <img alt="Tela aplicação" title="Tela aplicação" src="./public/images/img1.png" width="520px" height="400px" />
+    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img1.png" width="520px" height="400px" />
 </h1>
 <br/>
 <h1 align="center">
-    <img alt="Tela aplicação" title="Tela aplicação" src="./public/images/img2.png" width="520px" height="400px" />
+    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img2.png" width="520px" height="400px" />
 </h1>
 
 <br/>
@@ -44,9 +44,9 @@ Esse projeto demonstra uma aplicação que funciona em 'tempo real', ou seja, é
 
 ### Front-End
 
-> Deve ser possível criar um post através da camera no canto superior da tela.
+> Deve ser possível criar um post através da câmera no canto superior da tela.
 
-> Deve ser possível curtir um post através dos posts no feed.
+> Deve ser possível curtir um post apresentado no feed.
 
 ### Back-End
 
@@ -88,7 +88,7 @@ yarn start
 <br/>
 <br/>
 
-## Esse é apenas um projeto de estudos que oferece somente o código como referência, as variáveis que conectam ao banco de dados não estão disponíveis.
+> Esse é apenas um projeto de estudos que oferece somente o código como referência, as variáveis que conectam ao banco de dados não estão disponíveis.
 
 <br/>
 <br/>
