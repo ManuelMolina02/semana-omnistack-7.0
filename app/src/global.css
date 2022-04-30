@@ -9,4 +9,6 @@ body {
   background: #fafafa;
   font: 16px Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+
+  margin-top: 120px;
 }

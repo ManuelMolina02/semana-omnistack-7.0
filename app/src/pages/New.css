@@ -1,0 +1,40 @@
+form#new-post{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  margin: 2rem;
+  padding: 2rem;
+
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+form#new-post input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 52px;
+
+  padding: 0.5rem;
+  font-size: .8rem;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+  background: transparent;  
+}
+
+form#new-post button {
+  background: rgb(113, 93, 201);
+
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  height: 52px;
+  font-size: .86rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;  
+}
+
+form#new-post button:hover{
+  background: rgb(99, 81, 182);
+}

@@ -16,7 +16,6 @@ module.exports = {
     //transformando imagem em jpg
     const [name] = image.split(".");
     const fileName = `${name}.jpg`;
-
     //redimensionando a imagem
     await sharp(req.file.path)
       .resize(500)
@@ -29,7 +28,7 @@ module.exports = {
     //criando post
     const post = await Post.create({
       ...data,
-      fileName,
+      image: fileName,
     });
 
     //emitindo post criado a todos os usuários conectados
