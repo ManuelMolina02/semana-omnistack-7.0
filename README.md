@@ -16,11 +16,11 @@ Esse projeto demonstra uma aplicação que funciona em 'tempo real', ou seja, é
 ## 🔖 Layout
 
 <h1 align="center">
-    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img1.png" width="520px" height="320px" />
+    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img1.png" width="320px" height="400px" />
 </h1>
 
 <h1 align="center">
-    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img2.png" width="520px" height="180px" />
+    <img alt="Tela aplicação" title="Tela aplicação" src="./app/public/images/img2.png" width="260px" height="400px" />
 </h1>
 
 <br/>
