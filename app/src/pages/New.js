@@ -24,29 +24,33 @@ class New extends Component {
 
   //função para enviar os dados do formulário
   handleSubmit = async (e) => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
 
-    //pegar os dados do formulário
-    const data = new FormData();
+      //pegar os dados do formulário
+      const data = new FormData();
 
-    data.append("image", this.state.image);
-    data.append("author", this.state.author);
-    data.append("place", this.state.place);
-    data.append("description", this.state.description);
-    data.append("hashtags", this.state.hashtags);
+      data.append("image", this.state.image);
+      data.append("author", this.state.author);
+      data.append("place", this.state.place);
+      data.append("description", this.state.description);
+      data.append("hashtags", this.state.hashtags);
 
-    //enviar dados para o backend
-    await api.post("posts", data);
+      //enviar dados para o backend
+      await api.post("posts", data);
 
-    //redirecionar para a página principal
-    this.props.history.push("/");
-    window.location.reload("/");
+      //redirecionar para a página principal
+      this.props.history.push("/");
+      window.location.reload("/");
+    } catch (err) {
+      alert("Erro ao enviar post!");
+    }
   };
 
   render() {
     return (
       <form id="new-post" onSubmit={this.handleSubmit} autoComplete="off">
-        <input type="file" onChange={this.handleImageChange} />
+        <input type="file" onChange={this.handleImageChange} required />
 
         <input
           type="text"
@@ -54,6 +58,7 @@ class New extends Component {
           placeholder="Autor do post"
           onChange={this.handleChange}
           value={this.state.value}
+          required
         />
         <input
           type="text"
@@ -61,6 +66,7 @@ class New extends Component {
           placeholder="Local do post"
           onChange={this.handleChange}
           value={this.state.value}
+          required
         />
         <input
           type="text"
